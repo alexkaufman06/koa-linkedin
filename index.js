@@ -27,7 +27,8 @@ app.use(async (ctx) => {
     try {
         // if (!ctx.userData) { ctx.throw(400, 'User data is required')  };
         ctx.userData.money ++;
-        ctx.state.user = 'Joe Joergenstson'; // ctx is main request that contains the request/response methods
+        ctx.state.user = 'Joe Joergenstson'; 
+        // ctx is main request that contains the request/response methods
         let from = ctx.request.origin;
         ctx.body = `${ctx.userData.first} ${ctx.userData.last} ${ctx.userData.money} \n ${ctx.date}`;
         console.log(`${ctx.request.method} from PORT: ${from}`);
